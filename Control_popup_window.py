@@ -21,6 +21,12 @@ time.sleep(1)
 driver.close()
 time.sleep(1)
 
-# Close main window
+# Switch back to main window
 driver.switch_to.window(window_main)
+
+# Control on main window (ex: input text='Test' on "Search This Blog")
+driver.find_element_by_name('q').send_keys('Test')
+time.sleep(2)
+
+# Close main window
 driver.close()
